@@ -35,7 +35,32 @@
 
  :aliases
  {
-
+  :vulcan
+  {:extra-deps
+   {omnyway-labs/vulcan
+    {:git/url "git@github.com:omnyway-labs/vulcan.git",
+     :sha "9cebe1f666b323080689b5283f313bd2292375fc"
+     :tag "master"}},
+   :main-opts ["-m" "vulcan.main"],
+   :jvm-opts
+   ["-client"
+    "-XX:+UseSerialGC"
+    "-XX:CICompilerCount=1"
+    "-XX:+TieredCompilation"
+    "-Xshare:off"
+    "-Xverify:none"
+    "-XX:TieredStopAtLevel=1"]}
+  :saw
+  {:extra-deps
+   {omnyway-labs/saw
+    {:git/url "https://github.com/omnyway-labs/saw.git"
+     :sha "6dd8afab885910448e7537b36c2b3cd06929eda1"}}
+   :main-opts ["-m" "saw.main" "humans" "us-east-1"]}
+  :zam
+  {omnypay/zam
+   {:git/url "git@github.com:omnypay/zam.git",
+    :sha "b8ece3381f0ab40a2e1f3ecc95436dff36ee585a"
+    :tag "0.2.174"}}
   ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
   ;; REPL experience
 
