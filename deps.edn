@@ -41,6 +41,38 @@
 
  :aliases
  {;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+  ;; Omnyway Stuff
+
+  :vulcan
+  {:extra-deps
+   {omnyway-labs/vulcan
+    {:git/url "git@github.com:omnyway-labs/vulcan.git",
+     :sha "9cebe1f666b323080689b5283f313bd2292375fc"
+     :tag "master"}},
+   :main-opts ["-m" "vulcan.main"],
+   :jvm-opts
+   ["-client"
+    "-XX:+UseSerialGC"
+    "-XX:CICompilerCount=1"
+    "-XX:+TieredCompilation"
+    "-Xshare:off"
+    "-Xverify:none"
+    "-XX:TieredStopAtLevel=1"]}
+  :saw
+  {:extra-deps
+   {omnyway-labs/saw
+    {:git/url "https://github.com/omnyway-labs/saw.git"
+     :sha "6dd8afab885910448e7537b36c2b3cd06929eda1"
+     :tag "0.2.22"}}}
+  ;; :main-opts ["-m" "saw.main" "humans" "us-east-1"]}
+  ;; :saw {:mvn/version "0.2.22"}
+  :zam
+  {:extra-deps
+   {omnypay/zam
+    {:git/url "git@github.com:omnypay/zam.git",
+     :sha "1c3a0d802c127fcf0a7aad067c6d4178b49c8c97"
+     :tag "0.2.217"}}}
+
   ;; REPL and nREPL connections
 
   ;; Built-in Clojure REPL
@@ -1106,7 +1138,7 @@
  ;; JCenter is large and fast mirror often accessible behind corporate firewalls
 
  :mvn/repos {"central" {:url "https://repo1.maven.org/maven2/"}
-             "clojars" {:url "https://repo.clojars.org/"}
+             "clojars" {:url "https://repo.clojars.org/"}}}
 
              ;; Clojure snapshots
              ;; "sonatype" {:url "https://oss.sonatype.org/content/repositories/snapshots/"}
@@ -1126,4 +1158,4 @@
 
              ;; Example of local Artifactory repository configuration
              ;; {"business-area" {:url "https://artifacts.internal-server.com:443/artifactory/business-area-maven-local"}
-             }}
+             
