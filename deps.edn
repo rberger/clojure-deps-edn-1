@@ -1106,7 +1106,7 @@
  ;; JCenter is large and fast mirror often accessible behind corporate firewalls
 
  :mvn/repos {"central" {:url "https://repo1.maven.org/maven2/"}
-             "clojars" {:url "https://repo.clojars.org/"}}}
+             "clojars" {:url "https://repo.clojars.org/"}
 
              ;; Clojure snapshots
              ;; "sonatype" {:url "https://oss.sonatype.org/content/repositories/snapshots/"}
@@ -1126,3 +1126,4 @@
 
              ;; Example of local Artifactory repository configuration
              ;; {"business-area" {:url "https://artifacts.internal-server.com:443/artifactory/business-area-maven-local"}
+             }}
